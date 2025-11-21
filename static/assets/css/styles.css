@@ -1,0 +1,109 @@
+:root {
+    --bg-main: #020617;
+    --bg-navbar: #020617;
+    --bg-card: #020617;
+    --bg-surface: #020617;
+    --border-subtle: #1e293b;
+    --accent: #38bdf8;
+    --accent-soft: rgba(56, 189, 248, 0.15);
+    --text-main: #e5e7eb;
+    --text-muted: #9ca3af;
+}
+
+body.bg-surface {
+    background: radial-gradient(circle at top left, #0f172a 0, #020617 45%, #020617 100%);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-navbar {
+    background: radial-gradient(circle at top left, #1d283a, #020617);
+}
+
+.navbar-brand {
+    letter-spacing: 0.04em;
+}
+
+.badge.bg-accent {
+    background-color: var(--accent-soft);
+    color: var(--accent);
+}
+
+.card {
+    background-color: rgba(15, 23, 42, 0.9);
+    border: 1px solid var(--border-subtle);
+    border-radius: 1rem;
+}
+
+.stat-card {
+    border-radius: 1.2rem;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+}
+
+.stat-card h3 {
+    font-weight: 600;
+}
+
+.indicator-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: radial-gradient(circle, #22c55e 0, #16a34a 45%, #166534 100%);
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.9);
+}
+
+.indicator-warning {
+    background: radial-gradient(circle, #facc15 0, #eab308 45%, #a16207 100%);
+    box-shadow: 0 0 12px rgba(234, 179, 8, 0.9);
+}
+
+.btn-accent {
+    --bs-btn-bg: var(--accent);
+    --bs-btn-border-color: var(--accent);
+    --bs-btn-hover-bg: #0ea5e9;
+    --bs-btn-hover-border-color: #0ea5e9;
+    --bs-btn-color: #020617;
+    font-weight: 500;
+}
+
+.btn-accent:focus-visible {
+    box-shadow: 0 0 0 0.2rem rgba(56, 189, 248, 0.35);
+}
+
+.table-dark {
+    --bs-table-bg: rgba(15, 23, 42, 0.9);
+    --bs-table-border-color: var(--border-subtle);
+}
+
+.form-control,
+.form-select,
+textarea.form-control {
+    background-color: rgba(15, 23, 42, 0.9);
+    border-color: var(--border-subtle);
+    color: var(--text-main);
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea.form-control:focus {
+    background-color: rgba(15, 23, 42, 0.95);
+    color: var(--text-main);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.15rem rgba(56, 189, 248, 0.25);
+}
+
+.form-label {
+    color: var(--text-muted);
+}
+
+.footer {
+    border-top: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 767.98px) {
+    #summary-row .card {
+        border-radius: 0.9rem;
+    }
+}
